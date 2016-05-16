@@ -12,6 +12,6 @@
 
 A collection of utils services and directives for form interaction in angular
 
-Usage Example http://codepen.io/gpincheiraa/pen/grygmO
+Usage Example http://codepen.io/gpincheiraa/pen/WwBGoZ
 
 
