@@ -2,14 +2,14 @@
   'use strict';
   
   angular
-    .module('gp.FormUtils',[]);
+    .module('gp.formUtils',[]);
   
   /*
     gp-clean-form directive
   */
 
   angular
-    .module('gp.FormUtils')
+    .module('gp.formUtils')
     .directive('gpCleanForm', directive);
   
   function directive(){

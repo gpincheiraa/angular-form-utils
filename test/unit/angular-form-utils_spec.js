@@ -8,7 +8,7 @@
     
     var scope, domElement, rawHtmlString;
     
-    beforeEach(module('gp.FormUtils'));
+    beforeEach(module('gp.formUtils'));
     beforeEach(inject(eachSpecSetup));
     
     function eachSpecSetup($compile, $rootScope){
