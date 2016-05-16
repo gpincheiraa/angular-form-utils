@@ -1,0 +1,37 @@
+<html ng-app="exampleApp">
+
+<body>
+  
+
+
+  <div ng-controller="InformationController as information" class="controller-container">
+    <form name="myForm">
+      <input name="userName" type="text" ng-model="information.user.name"/>
+      <input name="userEmail" type="text" ng-model="information.user.email"/>
+      <input name="userAddress" type="text" ng-model="information.user.address"/>
+    </form>
+    <button gp-clean-form="myForm">Clear</button>
+  </div>
+
+  <!--script src="../bower_components/angular/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-messages.js"></script>
+  <script src="../angular-rut-validator.js"></script-->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-messages.js"></script>
+  <!--script src="https://rawgit.com/gpincheiraa/angular-rut-validator/master/src/angular-rut-validator.js"></script-->
+
+  <script>
+    (function () {
+        angular.module('exampleApp', [
+          'gp.formUtils'
+        ]);
+        angular.module('exampleApp').controller('InformationController', Controller);
+        function Controller() {
+          var vm = this;
+        }
+    }());
+
+  </script>
+</body>
+</html>
