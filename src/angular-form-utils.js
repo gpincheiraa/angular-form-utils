@@ -31,6 +31,16 @@
           ctrl.clearForm(scope[formName]);
         }
         else{
+          /*
+            Correctly throwing an error
+
+              Two tips on throwing an error:
+              
+              -Always throw an instance of Error class, never throw a string or an object. Getting stack trace is only possible via Error object, for example.
+              
+              throw new Error('broken')  // good
+              throw 'broken'  // bad
+          */
           throw ('Don\'t exist a form with the name ' + attributes.gpCleanForm + ' in the given scope');
         }
       });
