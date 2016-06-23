@@ -1,7 +1,7 @@
 {
-  "name": "angular-rut-validator",
-  "main": "src/angular-rut-validator.js",
-  "homepage": "https://github.com/gpincheiraa/angular-rut-validator",
+  "name": "angular-form-utils",
+  "main": "src/angular-form-utils.js",
+  "homepage": "https://github.com/gpincheiraa/angular-form-utils",
   "authors": [
     "Gonzalo Pincheira A. <g.pincheira.a@gmail.com>"
   ],
@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.5.2",
+    "angular": "~1.5.7",
     "angular-mocks": "~1.5.5"
   }
 }
