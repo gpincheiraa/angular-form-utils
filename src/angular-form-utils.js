@@ -4,6 +4,20 @@
   angular
     .module('gp.formUtils',[]);
   
+
+  angular
+    .module('gp.formUtils')
+    .filter('gpThousandsSeparator', filterThousandsSeparator);
+
+
+  function filterThousandsSeparator(){
+
+    return function(value, _separator){
+      var separator = _separator || '.';
+      return value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+    };
+  }
+
   /*
     gp-clean-form directive
   */

@@ -2,6 +2,56 @@
   
   'use strict';
   
+
+  describe('gpThousandsSeparator filter', thousandsSeparatorSpec);
+
+  function thousandsSeparatorSpec(){
+    
+    var filterService;
+
+    beforeEach(module('gp.formUtils'));
+
+    it('1. Should be format of a given number to thousands separator using the default separator "."', inject(spec1));
+
+    function spec1($filter){
+      
+      var num1 =  '10000',
+          num2 = '200000',
+          num3 = '300000000';
+      
+      expect($filter('gpThousandsSeparator')(num1)).toBe('10.000');
+      expect($filter('gpThousandsSeparator')(num2)).toBe('200.000');
+      expect($filter('gpThousandsSeparator')(num3)).toBe('300.000.000');
+    }
+
+    it('2. Should be format of a given number to thousands separator using the custom separator "."', inject(spec2));
+
+    function spec2($filter){
+      
+      var num1 =  '10000',
+          num2 = '200000';
+      
+      expect($filter('gpThousandsSeparator')(num1, ',')).toBe('10,000');
+      expect($filter('gpThousandsSeparator')(num2, '-')).toBe('200-000');
+
+    }
+
+    it('3. Should be return the same entry if the given value it\'s not a number',inject(spec3));
+
+    function spec3($filter){
+      
+      var num1 =  'value',
+          num2 = 'false_value';
+      
+      expect($filter('gpThousandsSeparator')(num1)).toBe(num1);
+      expect($filter('gpThousandsSeparator')(num2)).toBe(num2);
+
+    }
+
+
+
+  }
+
   describe('gpCleanForm directive', cleanFormSpec);
   
   function cleanFormSpec(){
