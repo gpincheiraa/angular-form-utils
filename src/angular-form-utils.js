@@ -14,7 +14,8 @@
 
     return function(value, _separator){
       var separator = _separator || '.';
-      return value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+
+      return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     };
   }
 
