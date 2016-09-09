@@ -22,7 +22,7 @@
     return ddo;
 
     function linkFn(scope, element, attrs) {
-      scope.$watch(attrs.showFocus,function (newValue, oldValue) {
+      scope.$watch(attrs.gpShowFocus,function (newValue, oldValue) {
         if(newValue === oldValue) return;
         
         $timeout(function() {newValue && element[0].focus();}); 
