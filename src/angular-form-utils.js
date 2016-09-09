@@ -25,7 +25,7 @@
       scope.$watch(attrs.gpShowFocus,function (newValue, oldValue) {
         if(newValue === oldValue) return;
         
-        $timeout(function() {newValue && element[0].focus();}); 
+        $timeout(function() {newValue && element[0].focus();}, 100); 
       
       },true);
     }  
