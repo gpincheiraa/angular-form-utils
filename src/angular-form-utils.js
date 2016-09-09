@@ -5,6 +5,32 @@
     .module('gp.formUtils',[]);
   
 
+
+  angular
+    .module('gp.formUtils')
+    .directive('gpShowFocus', showFocusDirective);
+
+  showFocusDirective.$inject = ['$timeout'];
+  
+  function showFocusDirective($timeout) {
+    
+    var ddo = {
+      restrict: 'A',
+      link: linkFn,
+    };
+
+    return ddo;
+
+    function linkFn(scope, element, attrs) {
+      scope.$watch(attrs.showFocus,function (newValue, oldValue) {
+        if(newValue === oldValue) return;
+        
+        $timeout(function() {newValue && element[0].focus();}); 
+      
+      },true);
+    }  
+  }
+
   angular
     .module('gp.formUtils')
     .filter('gpThousandsSeparator', filterThousandsSeparator);
